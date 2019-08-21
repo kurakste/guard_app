@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { View, Text } from 'react-native';
+import CustomHeader from '../Common/CustomHeader';
 
 const One = () => (
-  <View>
-    <Text> One </Text>
-  </View>
+  <Fragment>
+    <CustomHeader
+      title={'One'}
+      drawerOpen={() => this.props.navigation.openDrawer()}
+    />
+    <View>
+      <Text> One </Text>
+    </View>
+  </Fragment>
 );
 
 export default One;
