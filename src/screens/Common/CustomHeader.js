@@ -2,7 +2,6 @@ import React from 'react';
 import { withNavigation } from 'react-navigation';
 
 import { Header, Body, Icon, Title, Left, Right, Button } from 'native-base';
-// import Icon from 'react-native-vector-icons/Ionicons';
 
 const CustomHeader = props => (
   <Header
