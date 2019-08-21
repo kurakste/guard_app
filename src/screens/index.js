@@ -28,13 +28,13 @@ const Navigator = createDrawerNavigator(
   },
 );
 
-const AppContainer = createAppContainer(Navigator);
+const App = createAppContainer(Navigator);
 
-type Props = {};
+// type Props = {};
 
-class App extends Component<Props> {
-  render() {
-    return <AppContainer />;
-  }
-}
+// class App extends Component<Props> {
+//   render() {
+//     return <AppContainer />;
+//   }
+// }
 export default App;
