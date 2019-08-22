@@ -8,6 +8,8 @@ import {
 import React, { Component } from 'react';
 import One from './One';
 import Two from './Two';
+import Hi from './Init/hi';
+import Login from './Init/login';
 import DrawerScreen from './Common/DrawerScreen';
 
 const Navigator = createDrawerNavigator(
@@ -28,7 +30,23 @@ const Navigator = createDrawerNavigator(
   },
 );
 
-const App = createAppContainer(Navigator);
+const initStack = createStackNavigator(
+  {
+    Hi,
+    Login,
+    NavigatorStack: {
+      screen: Navigator,
+    },
+  },
+  {
+    // mode: 'modal',
+    headerMode: 'none',
+    //headerMode: 'float',
+  },
+);
+
+// const App = createAppContainer(Navigator);
+const App = createAppContainer(initStack);
 
 // type Props = {};
 

@@ -7,10 +7,6 @@ class One extends Component<Props, State> {
   static navigationOptions = ({ navigation }) => {
     const { params } = navigation.state;
     return {
-      header: null,
-      headerStyle: {
-        backgroundColor: '#525050',
-      },
       title: 'one', // drawer label initialization
       drawerLabel: params && params.DLabel,
       drawerIcon: ({ tintColor }) => (
