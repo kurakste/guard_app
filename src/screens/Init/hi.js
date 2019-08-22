@@ -1,13 +1,17 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, { Component } from 'react';
-import { View, ImageBackground, Text } from 'react-native';
+import { View, ImageBackground, Text, StatusBar } from 'react-native';
 import { Button } from 'native-base';
 import images from '../../images';
 
 class Hi extends Component {
+  static navigationOptions = ({ navigation }) => ({
+    header: null,
+  });
   render() {
     return (
       <View style={styles.container}>
+        <StatusBar backgroundColor="#31312f" />
         <ImageBackground
           resizeMode="cover"
           style={styles.background}

@@ -41,7 +41,7 @@ const initStack = createStackNavigator(
   {
     // mode: 'modal',
     headerMode: 'none',
-    // headerMode: 'float',
+    //headerMode: 'float',
   },
 );
 
