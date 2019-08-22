@@ -10,7 +10,7 @@ const CustomHeader = props => (
         ? props.navigation.state.params.DLabel
         : 'header'
     }
-    androidStatusBarColor="#757171"
+    // androidStatusBarColor="#757171"
     style={styles.header}>
     <Left>
       <Button transparent onPress={() => props.drawerOpen()}>

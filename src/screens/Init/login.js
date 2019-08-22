@@ -12,7 +12,6 @@ class Login extends Component {
         <View>
           <Button
             transparent
-            // light
             onPress={() => {
               console.log('123');
               this.props.navigation.navigate('One');
