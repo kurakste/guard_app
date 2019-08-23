@@ -10,6 +10,7 @@ import One from './One';
 import Two from './Two';
 import Hi from './Init/hi';
 import Login from './Init/login';
+import Password from './Init/password';
 import DrawerScreen from './Common/DrawerScreen';
 
 const Navigator = createDrawerNavigator(
@@ -34,6 +35,7 @@ const initStack = createStackNavigator(
   {
     Hi,
     Login,
+    Password,
     NavigatorStack: {
       screen: Navigator,
       navigationOptions: () => ({
