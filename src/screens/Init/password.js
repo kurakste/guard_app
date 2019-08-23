@@ -28,7 +28,6 @@ class Password extends Component {
           <View style={styles.inputBlock}>
             <Text style={styles.inputText}>E-mail</Text>
             <TextInput
-              placeholderTextColor="lightgray"
               selectionColor="#FFF"
               underlineColorAndroid="transparent"
               style={styles.input}
@@ -39,7 +38,7 @@ class Password extends Component {
           block
           style={{ backgroundColor: '#474747' }}
           onPress={() => {
-            this.props.navigation.navigate('One');
+            this.props.navigation.navigate('newPassword');
           }}>
           <Text style={styles.buttonText}>Далее</Text>
         </Button>
