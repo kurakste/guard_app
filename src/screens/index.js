@@ -36,12 +36,15 @@ const initStack = createStackNavigator(
     Login,
     NavigatorStack: {
       screen: Navigator,
+      navigationOptions: () => ({
+        header: null,
+      }),
     },
   },
   {
     // mode: 'modal',
-    headerMode: 'none',
-    //headerMode: 'float',
+    // headerMode: 'none',
+    // headerMode: 'float',
   },
 );
 

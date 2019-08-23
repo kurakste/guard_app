@@ -10,7 +10,7 @@ class Hi extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <StatusBar backgroundColor="#31312f" />
+        <StatusBar backgroundColor="#000000" />
         <ImageBackground
           resizeMode="cover"
           style={styles.background}

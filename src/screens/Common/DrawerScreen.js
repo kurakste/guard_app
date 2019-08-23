@@ -11,7 +11,7 @@ const DrawerScreen = props => (
       style={styles.safeAreaView}
       forceInset={{ top: 'always', horizontal: 'never' }}>
       {/* <StatusBar barStyle="dark-content" backgroundColor="#757171" /> */}
-      <Header androidStatusBarColor="#31312f" style={styles.drawerHeader}>
+      <Header androidStatusBarColor="#000000" style={styles.drawerHeader}>
         <Body>
           <Image
             resizeMode="cover"

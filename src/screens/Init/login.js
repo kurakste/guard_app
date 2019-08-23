@@ -1,29 +1,40 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, { Component } from 'react';
-import { View, Text, StatusBar } from 'react-native';
+import { View, Text, StatusBar, Platform, TextInput } from 'react-native';
 import { Button } from 'native-base';
 
 class Login extends Component {
   static navigationOptions = ({ navigation }) => ({
-    // drawerLockMode: 'locked-closed',
-    headerTitle: <Text style={styles.headerText}>Назад</Text>,
+    headerTitle:
+      Platform.OS === 'android' ? (
+        <Text style={styles.headerText}>Назад</Text>
+      ) : null,
+    headerBackTitle:
+      Platform.OS === 'ios' ? (
+        <Text style={styles.headerText}>Назад</Text>
+      ) : null,
     headerStyle: {
-      backgroundColor: '#31312f',
+      backgroundColor: '#000000',
     },
     headerTintColor: '#fff',
-    // headerTitleStyle: {
-    //   fontWeight: 'bold',
-    // },
-    // headerMode: 'float',
   });
 
   render() {
     return (
       <View style={styles.container}>
-        <StatusBar backgroundColor="#31312f" />
-        <View style={styles.hi}>
-          <Text style={styles.buttonText}>Авторизация</Text>
+        <StatusBar backgroundColor="#000000" />
+        <View style={styles.login}>
+          <Text style={styles.loginText}>Авторизация</Text>
         </View>
+        <TextInput
+          // Adding hint in Text Input using Place holder.
+          placeholder="Enter Text in TextInput"
+          // Making the Under line Transparent.
+          underlineColorAndroid="transparent"
+          // Calling the custom TextInputStyleClass.
+          style={styles.TextInputStyleClass}
+        />
+
         <View style={styles.footer}>
           <Button
             transparent
@@ -41,14 +52,37 @@ class Login extends Component {
 export default Login;
 
 const styles = {
+  headerText: {
+    color: '#FFF',
+  },
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#31312f',
+    backgroundColor: '#000000',
+    justifyContent: 'flex-start',
   },
+  login: {
+    flex: 1,
+    alignItems: 'center',
+  },
+  loginText: {
+    fontSize: 23,
+    color: '#FFF',
+  },
+  TextInputStyleClass: {
+    // Setting up Hint Align center.
+    textAlign: 'center',
+    // Setting up TextInput height as 50 pixel.
+    height: 50,
+    // Set border width.
+    borderWidth: 2,
+    // Set border Hex Color Code Here.
+    // borderColor: '#FF5722',
+    // Set border Radius.
+    borderRadius: 20,
 
-  hi: { flex: 1, alignItems: 'center', justifyContent: 'center' },
+    //Set background color of Text Input.
+    backgroundColor: 'gray',
+  },
   footer: {
     flexDirection: 'row',
     alignSelf: 'center',
