@@ -31,7 +31,7 @@ class Hi extends Component {
               transparent
               style={styles.button}
               onPress={() => {
-                this.props.navigation.navigate('Login');
+                this.props.navigation.navigate('Register');
               }}>
               <Text style={styles.buttonText}>Регистрация</Text>
             </Button>
