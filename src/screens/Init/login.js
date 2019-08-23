@@ -25,23 +25,45 @@ class Login extends Component {
         <StatusBar backgroundColor="#000000" />
         <View style={styles.login}>
           <Text style={styles.loginText}>Авторизация</Text>
+          <View style={styles.inputBlock}>
+            <Text style={styles.inputText}>E-mail</Text>
+            <TextInput
+              placeholder="email@example.com"
+              placeholderTextColor="lightgray"
+              selectionColor="#FFF"
+              underlineColorAndroid="transparent"
+              style={styles.input}
+            />
+            <Text style={styles.inputText}>Пароль</Text>
+            <TextInput
+              underlineColorAndroid="transparent"
+              style={styles.input}
+            />
+            <Text
+              style={[
+                styles.inputText,
+                { fontSize: 12, textDecorationLine: 'underline' },
+              ]}>
+              Забыли пароль?
+            </Text>
+            <Text style={styles.footerText}>
+              При авторизации Вы принимаете условие{' '}
+              <Text style={{ textDecorationLine: 'underline' }}>
+                {' '}
+                соглашения с конечным пользователем.
+              </Text>
+            </Text>
+          </View>
         </View>
-        <TextInput
-          // Adding hint in Text Input using Place holder.
-          placeholder="Enter Text in TextInput"
-          // Making the Under line Transparent.
-          underlineColorAndroid="transparent"
-          // Calling the custom TextInputStyleClass.
-          style={styles.TextInputStyleClass}
-        />
 
         <View style={styles.footer}>
           <Button
-            transparent
+            block
+            style={{ backgroundColor: '#474747' }}
             onPress={() => {
               this.props.navigation.navigate('One');
             }}>
-            <Text style={[styles.buttonText, { marginRight: 20 }]}>One</Text>
+            <Text style={styles.buttonText}>Войти</Text>
           </Button>
         </View>
       </View>
@@ -62,38 +84,38 @@ const styles = {
   },
   login: {
     flex: 1,
-    alignItems: 'center',
   },
   loginText: {
     fontSize: 23,
     color: '#FFF',
-  },
-  TextInputStyleClass: {
-    // Setting up Hint Align center.
     textAlign: 'center',
-    // Setting up TextInput height as 50 pixel.
+  },
+  inputBlock: { marginTop: 15, marginLeft: 30, marginRight: 30 },
+  inputText: {
+    fontSize: 16,
+    color: '#FFF',
+    marginLeft: 10,
+  },
+  input: {
+    color: '#FFF',
+    textAlign: 'center',
     height: 50,
-    // Set border width.
     borderWidth: 2,
-    // Set border Hex Color Code Here.
-    // borderColor: '#FF5722',
-    // Set border Radius.
-    borderRadius: 20,
-
-    //Set background color of Text Input.
-    backgroundColor: 'gray',
+    borderRadius: 15,
+    backgroundColor: '#474747',
+  },
+  footerText: {
+    textAlign: 'center',
+    fontSize: 13,
+    color: '#FFF',
+    marginTop: 20,
   },
   footer: {
-    flexDirection: 'row',
-    alignSelf: 'center',
-    marginBottom: 20,
-  },
-  divider: {
-    borderLeftWidth: 0.55,
-    borderColor: '#FFF',
+    // flex: 1,
   },
   buttonText: {
-    fontSize: 18,
+    fontSize: 20,
     color: '#FFF',
+    textAlign: 'center',
   },
 };
