@@ -10,6 +10,9 @@ import One from './One';
 import Two from './Two';
 import Hi from './Init/hi';
 import Login from './Init/login';
+import Password from './Init/password';
+import newPassword from './Init/newPassword';
+import Register from './Init/register';
 import DrawerScreen from './Common/DrawerScreen';
 
 const Navigator = createDrawerNavigator(
@@ -34,14 +37,20 @@ const initStack = createStackNavigator(
   {
     Hi,
     Login,
+    Password,
+    newPassword,
+    Register,
     NavigatorStack: {
       screen: Navigator,
+      navigationOptions: () => ({
+        header: null,
+      }),
     },
   },
   {
     // mode: 'modal',
-    headerMode: 'none',
-    //headerMode: 'float',
+    // headerMode: 'none',
+    // headerMode: 'float',
   },
 );
 

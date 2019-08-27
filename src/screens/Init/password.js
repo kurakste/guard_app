@@ -1,16 +1,9 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, { Component } from 'react';
-import {
-  View,
-  Text,
-  StatusBar,
-  Platform,
-  TextInput,
-  TouchableOpacity,
-} from 'react-native';
+import { View, Text, StatusBar, Platform, TextInput } from 'react-native';
 import { Button } from 'native-base';
 
-class Login extends Component {
+class Password extends Component {
   static navigationOptions = ({ navigation }) => ({
     headerTitle:
       Platform.OS === 'android' ? (
@@ -30,59 +23,31 @@ class Login extends Component {
     return (
       <View style={styles.container}>
         <StatusBar backgroundColor="#000000" />
-        <View style={styles.login}>
-          <Text style={styles.loginText}>Авторизация</Text>
+        <View style={styles.password}>
+          <Text style={styles.passwordText}>Восстановление пароля</Text>
           <View style={styles.inputBlock}>
             <Text style={styles.inputText}>E-mail</Text>
             <TextInput
-              placeholder="email@example.com"
-              placeholderTextColor="lightgray"
               selectionColor="#FFF"
               underlineColorAndroid="transparent"
               style={styles.input}
             />
-            <Text style={styles.inputText}>Пароль</Text>
-            <TextInput
-              selectionColor="#FFF"
-              underlineColorAndroid="transparent"
-              style={styles.input}
-            />
-            <TouchableOpacity
-              onPress={() => {
-                this.props.navigation.navigate('Password');
-              }}>
-              <Text
-                style={[
-                  styles.inputText,
-                  { fontSize: 12, textDecorationLine: 'underline' },
-                ]}>
-                Забыли пароль?
-              </Text>
-            </TouchableOpacity>
-            <Text style={styles.footerText}>
-              При авторизации Вы принимаете условие{' '}
-              <Text style={{ textDecorationLine: 'underline' }}>
-                {' '}
-                соглашения с конечным пользователем.
-              </Text>
-            </Text>
           </View>
         </View>
-
         <Button
           block
           style={{ backgroundColor: '#474747' }}
           onPress={() => {
-            this.props.navigation.navigate('One');
+            this.props.navigation.navigate('newPassword');
           }}>
-          <Text style={styles.buttonText}>Войти</Text>
+          <Text style={styles.buttonText}>Далее</Text>
         </Button>
       </View>
     );
   }
 }
 
-export default Login;
+export default Password;
 
 const styles = {
   headerText: {
@@ -93,10 +58,10 @@ const styles = {
     backgroundColor: '#000000',
     justifyContent: 'flex-start',
   },
-  login: {
+  password: {
     flex: 1,
   },
-  loginText: {
+  passwordText: {
     fontSize: 23,
     color: '#FFF',
     textAlign: 'center',
@@ -114,12 +79,6 @@ const styles = {
     borderWidth: 2,
     borderRadius: 15,
     backgroundColor: '#474747',
-  },
-  footerText: {
-    textAlign: 'center',
-    fontSize: 13,
-    color: '#FFF',
-    marginTop: 20,
   },
   buttonText: {
     fontSize: 20,

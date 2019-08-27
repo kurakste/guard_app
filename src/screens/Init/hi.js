@@ -1,4 +1,3 @@
-/* eslint-disable react-native/no-inline-styles */
 import React, { Component } from 'react';
 import { View, ImageBackground, Text, StatusBar } from 'react-native';
 import { Button } from 'native-base';
@@ -11,7 +10,7 @@ class Hi extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <StatusBar backgroundColor="#31312f" />
+        <StatusBar backgroundColor="#000000" />
         <ImageBackground
           resizeMode="cover"
           style={styles.background}
@@ -22,22 +21,19 @@ class Hi extends Component {
           <View style={styles.footer}>
             <Button
               transparent
+              style={styles.button}
               onPress={() => {
                 this.props.navigation.navigate('Login');
               }}>
-              <Text style={[styles.buttonText, { marginRight: 20 }]}>
-                Авторизоваться
-              </Text>
+              <Text style={styles.buttonText}>Авторизоваться</Text>
             </Button>
-            <View style={styles.divider} />
             <Button
               transparent
+              style={styles.button}
               onPress={() => {
-                this.props.navigation.navigate('Login');
+                this.props.navigation.navigate('Register');
               }}>
-              <Text style={[styles.buttonText, { marginLeft: 20 }]}>
-                Регистрация
-              </Text>
+              <Text style={styles.buttonText}>Регистрация</Text>
             </Button>
           </View>
         </ImageBackground>
@@ -75,8 +71,13 @@ const styles = {
     borderLeftWidth: 0.55,
     borderColor: '#FFF',
   },
+  button: {
+    flex: 1,
+    justifyContent: 'center',
+  },
   buttonText: {
     fontSize: 18,
     color: '#FFF',
+    textAlign: 'center',
   },
 };
