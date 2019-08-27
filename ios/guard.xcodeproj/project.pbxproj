@@ -19,7 +19,7 @@
 		2DCD954D1E0B4F2C00145EB5 /* guardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* guardTests.m */; };
 		347AF0A634EB84451A177E2D /* libPods-guard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E11FFB787F5BCFEFF22F035E /* libPods-guard.a */; };
 		65C17A662C20CF14333F62CB /* libPods-guardTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D20B233C8760CF6168C4AA96 /* libPods-guardTests.a */; };
-		D0FE87CB278FC6B352865485 /* libPods-guard-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ABFE587AE9451C4ADF1B4EB /* libPods-guard-tvOS.a */; };
+		D0FE87CB278FC6B352865485 /* libPods-guard-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ABFE587AE9451C4ADF1B4EB /* libPods-guard-tvOS.a */; };		
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +66,7 @@
 		D20B233C8760CF6168C4AA96 /* libPods-guardTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-guardTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E11FFB787F5BCFEFF22F035E /* libPods-guard.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-guard.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };	
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +152,22 @@
 		3C9549E9B64B48D28C4C73CE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F2CD2FB8B5F54B43BB9F211F /* AntDesign.ttf */,
+				59485C711B9F4B2C82F9C17E /* Entypo.ttf */,
+				529BD14A91F24E7C8778561F /* EvilIcons.ttf */,
+				3EC3E7089C734DA4AADD9CB8 /* Feather.ttf */,
+				C1F9160BE6924976A739EF13 /* FontAwesome.ttf */,
+				80BC8ADF4BBE45FD92F985FA /* FontAwesome5_Brands.ttf */,
+				3F698741968F454EA5C068FE /* FontAwesome5_Regular.ttf */,
+				F56830B9CCAE49969D3557A2 /* FontAwesome5_Solid.ttf */,
+				F4339F57C723464DA7ED1FB3 /* Fontisto.ttf */,
+				8B937883400F42289D888521 /* Foundation.ttf */,
+				ABB91C632C184D069D02A6D7 /* Ionicons.ttf */,
+				5816C3B52F844B718378E399 /* MaterialCommunityIcons.ttf */,
+				16859E0BA43B4EF9AEA21504 /* MaterialIcons.ttf */,
+				1AEA812F85A3484FA61C510E /* Octicons.ttf */,
+				D036CAC71C5A4D88A1C8784F /* SimpleLineIcons.ttf */,
+				DD62C6C831064648BC3D6301 /* Zocial.ttf */,
 			);
 			name = Resources;
 			path = "";
@@ -348,6 +364,22 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				58CE4BC9E5D8408A8C5A01C5 /* AntDesign.ttf in Resources */,
+				FAC9AD7490CA4031B6F968E9 /* Entypo.ttf in Resources */,
+				B7409EA3BCD54328B40028ED /* EvilIcons.ttf in Resources */,
+				7BC61D63461B42EBBD8AC32C /* Feather.ttf in Resources */,
+				87920FD95B2E49C796053F3F /* FontAwesome.ttf in Resources */,
+				5940000E83F04CE0ACA617C2 /* FontAwesome5_Brands.ttf in Resources */,
+				B2A8A2779B704E72B56A2B42 /* FontAwesome5_Regular.ttf in Resources */,
+				D122F0F5A5BB45CCBE9852B8 /* FontAwesome5_Solid.ttf in Resources */,
+				CD45C0BAE9F34B5982CBEDB7 /* Fontisto.ttf in Resources */,
+				7A63B133E16942BB970DF0F1 /* Foundation.ttf in Resources */,
+				78B5B8CA4A6848069F03CA6F /* Ionicons.ttf in Resources */,
+				9738511CF584409A8DEB8DDC /* MaterialCommunityIcons.ttf in Resources */,
+				6FB45EEE9EF3424BA5572254 /* MaterialIcons.ttf in Resources */,
+				5B242DFAFCF44A8AA12CD56C /* Octicons.ttf in Resources */,
+				CA2D68A59093414E9E5E023B /* SimpleLineIcons.ttf in Resources */,
+				F60A75B9CCB241ACA762E748 /* Zocial.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
